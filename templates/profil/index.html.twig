@@ -1,0 +1,64 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ProfilController!{% endblock %}
+
+{% block body %}
+    {% if app.user %}
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="text-center">
+            <h1 style="text-decoration: underline"> Vous etes identifié en tant que {{ app.user.firstname }}</h1>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    {% endif %}
+
+    {% if app.user %}
+    <div style="margin-left: 550px" class="row">
+            <div class="card">
+                <div class="card-image"><img src="{{ asset('build/logoCV.jpeg') }}">
+                    <div class="card-body">
+                        <h3 class="text-center">{{ app.user.lastname }}</h3>
+                        <br>
+                        <h4 class="text-center">{{ app.user.firstname }}</h4>
+                        <br>
+                        <h4 class="text-center">{{ app.user.pseudo }}</h4>
+                        <br>
+                        <h4 class="text-center">{{ app.user.ville }}, {{ app.user.codepostal }}</h4>
+                        <input type="text" name="id" value="value" style="display: none">
+                        <button  class="btn-succes" type="submit" data-toggle="modal" >
+                            <p>Voir le CV</p>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        <div class="card">
+            <div class="card-image"><a href="{{ path('ajout') }}"><img src="{{ asset('build/ajouter.jpg') }}"></a>
+                <div class="card-body">
+                    <h3 class="text-center">Nom</h3>
+                    <br>
+                    <h4 class="text-center">Prenom</h4>
+                    <br>
+                    <h4 class="text-center">Domaine</h4>
+                    <br>
+                    <h4 class="text-center">ville</h4>
+                    <br>
+                    <h4 class="text-center">code postale</h4>
+                    <input type="text" name="id" value="value" style="display: none">
+                    <a href="{{ path('ajout') }}"><button  class="btn-succes" type="submit" data-toggle="modal" >
+                        <p>Voir le CV</p>
+                        </button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+{% endblock %}

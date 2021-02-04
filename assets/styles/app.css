@@ -1,4 +1,76 @@
 @import "~bootstrap";
+
 body {
-    background-color: lightgray;
+    background-image: linear-gradient(to right top, #030304, #353a3d, #647273, #9eb0a7, #e8eed9);}
+.nav-link{
+    width: 150px;
 }
+.titre{
+    font: italic small-caps bold 60px/2 cursive;
+}
+.btn-succes{
+    color: white;
+}
+.card {
+    display: flex;
+    width: 290px; /*1*/
+    height: 600px;
+    margin-right: 50px; /*2*/
+    margin-left: 35px; /*2*/
+    box-shadow: 0px 5px 20px #999; /*4*/
+    opacity: 0.9;
+    border-style:solid;
+    border-color:black;
+}
+
+.card button{
+    width: 150px;
+    height: 30px;
+    margin-top: 10px;
+    margin-left: 20px;
+    font-family: "Comic Sans MS";
+    background-image: linear-gradient(to bottom, #5eb5e0, #005cbf, #007bff, #007bff, #0056b3);
+}
+
+.card a { /*5*/
+    color: #fcfcfc;
+    text-decoration: none;
+}
+.card-image {
+    height: 600px;/*1*/
+    width: 15em;
+    position: relative;/*2*/
+    overflow: hidden;/*3*/
+    padding-left: 20px;
+}
+.card-image img {
+    height: 250px;
+    width: 100%;
+    position: relative; top:10px; left:10px;
+}
+.card-body {
+    text-align:center;  /*1*/
+    box-sizing: border-box; /*3*/
+    color: #050505;
+}
+.card-excerpt {
+    font-family: 'Playfair Display', serif;
+    color: #777;
+}
+.icon{
+    margin-right: 15px;
+}
+.card-body p{
+    margin: 6px;
+}
+.card-body h3{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+}
+.champs{
+    color: white;
+}
+
+
+
