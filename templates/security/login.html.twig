@@ -4,11 +4,24 @@
 
 {% block body %}
 <form method="post">
-
-    <h1 class="h3 mb-3 font-weight-normal text-center">Please sign in</h1>
-    <label for="inputEmail">Email</label>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+    <h1 class="champs h3 mb-3 font-weight-normal text-center" style="text-decoration: underline"><b>Connectez-vous pour ajouter votre CV !</b></h1>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <label  class="champs" for="inputEmail" style="margin-left: 720px"><b>Email</b></label>
     <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" required autofocus>
-    <label for="inputPassword">Password</label>
+    <br>
+    <br>
+    <label class="champs" for="inputPassword"  style="margin-left: 690px"><b>Mot de passe</b></label>
     <input type="password" name="password" id="inputPassword" class="form-control" required>
 
     <input type="hidden" name="_csrf_token"
@@ -26,8 +39,11 @@
         </div>
     #}
 
-    <a href="{{ path('profil') }}"><button class="btn btn-lg btn-primary" type="submit">
-        Sign in
+    <a href="{{ path('profil') }}"><button class="btn btn-lg btn-primary" style="margin-left: 680px; margin-top: 50px" type="submit">
+        Connexion
+        </button></a>
+    <a href="{{ path('app_register') }}"><button class="btn btn-lg btn-primary" style="margin-left: 590px; margin-top: 20px" type="button">
+            Pas de compte? c'est par là !
         </button></a>
 </form>
 {% endblock %}

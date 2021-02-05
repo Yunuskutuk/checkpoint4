@@ -1,7 +1,8 @@
 @import "~bootstrap";
 
 body {
-    background-image: linear-gradient(to right top, #030304, #353a3d, #647273, #9eb0a7, #e8eed9);}
+    background-image: linear-gradient(to top, #000c83, #4c47a6, #817fc6, #b8bae4, #f5f6ff);}
+
 .nav-link{
     width: 150px;
 }

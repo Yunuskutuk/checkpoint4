@@ -12,7 +12,7 @@
 <br>
 <br>
 <br>
-    <h1 class="text-center" style="text-decoration: underline; color: #0a0a0a"><b>Inscrivez-vous et déposer votre CV rapidement !</b></h1>
+    <h1 class="text-center" style="text-decoration: underline; color: #FFFFFF"><b>Inscrivez-vous et déposer votre CV rapidement !</b></h1>
     <br>
     <br>
     <br>
@@ -22,11 +22,12 @@
     <div class="offset-4"
 
     {{ form_start(registrationForm) }}
+        <label for="fichier"><b>Telecharge ton CV</b></label>
+        <input type="file" class="form-control-file" id="fichier">
+    <br>
         {{ form_row(registrationForm.Firstname) }}
     <br>
     {{ form_row(registrationForm.Lastname) }}
-    <br>
-    {{ form_row(registrationForm.Pseudo) }}
     <br>
         {{ form_row(registrationForm.plainPassword, {
             label: 'Password'
@@ -41,8 +42,6 @@
     {{ form_row(registrationForm.Pays) }}
     <br>
     {{ form_row(registrationForm.Codepostal) }}
-    <br>
-        {{ form_row(registrationForm.agreeTerms) }}
     <br>
     <div class="row" style="margin-bottom: 20px; margin-left: 100px">
         <a href="{{ path('app_login') }}"><button type="submit" class="btn btn-primary">Je m'inscrit</button></a>
