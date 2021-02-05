@@ -3,6 +3,29 @@
 {% block title %}Hello HomeController!{% endblock %}
 
 {% block body %}
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">CV de (id de la personne)</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                   (CV upload) -> exemple
+                    <img src="{{ asset('build/cvhulk.jpg') }}" width="480">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Contacter (id.mail)</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -45,7 +68,6 @@
 <div style='display:flex; margin-left: 100px'>
     <div class="row" style="margin-right: 160px">
         <div class="col-3">
-    <form method="post" action="startGame">
         <div class="card">
             <div class="card-image"><img src="{{ asset('build/hulk.jpeg') }}">
                 <div class="card-body">
@@ -55,15 +77,15 @@
                     <br>
                     <h4 class="text-center">Domaine</h4>
                     <br>
-                    <h4 class="text-center">Experiences</h4>
+                    <h4 class="text-center">Age</h4>
                     <input type="text" name="id" value="value" style="display: none">
-                    <button  class="btn-succes" type="submit" data-toggle="modal" >
-                        <p>Voir le CV</p>
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                        Voir le CV
                     </button>
                 </div>
             </div>
         </div>
-    </form>
         </div>
         <div class="col-3">
             <form method="post" action="startGame">
@@ -76,7 +98,7 @@
                             <br>
                             <h4 class="text-center">Domaine</h4>
                             <br>
-                            <h4 class="text-center">Experiences</h4>
+                            <h4 class="text-center">Age</h4>
                             <input type="text" name="id" value="value" style="display: none">
                             <button  class="btn-succes" type="submit" data-toggle="modal" >
                                 <p>Voir le CV</p>
@@ -97,7 +119,7 @@
                             <br>
                             <h4 class="text-center">Domaine</h4>
                             <br>
-                            <h4 class="text-center">Experiences</h4>
+                            <h4 class="text-center">Age</h4>
                             <input type="text" name="id" value="value" style="display: none">
                             <button  class="btn-succes" type="submit" data-toggle="modal" >
                                 <p>Voir le CV</p>
@@ -145,5 +167,6 @@
             </form>
         </div>
     </div>
+</div>
 </div>
 {% endblock %}
