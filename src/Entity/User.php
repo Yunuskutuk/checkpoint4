@@ -6,6 +6,9 @@ use App\Repository\UserRepository;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Vich\UploaderBundle\Entity\File;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
+
 
 /**
  * @ORM\Entity(repositoryClass=UserRepository::class)
@@ -60,6 +63,25 @@ class User implements UserInterface
      * @ORM\Column(type="string", length=255)
      */
     private $Ville;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     * @var string
+     */
+    private $poster;
+
+    /**
+     * @Vich\UploadableField(mapping="poster_file", fileNameProperty="poster")
+     * @var File
+     */
+    private $posterFile;
+
+    /**
+     * @ORM\Column(type="Datetime")
+     * @var Datetime
+     */
+    private $updatedAt;
+
 
     /**
      * @ORM\Column(type="string", length=255)
@@ -230,5 +252,39 @@ class User implements UserInterface
         $this->Codepostal = $Codepostal;
 
         return $this;
+    }
+
+    public function setPosterFile(File $image = null)
+    {
+        $this->imageFile = $image;
+        if ($image) {
+            $this->updatedAt = new DateTime('now');
+        }
+    }
+
+    public function getPosterFile(): ?File
+    {
+        return $this->posterFile;
+    }
+    public function getPoster(): ?string
+    {
+        return $this->poster;
+    }
+
+    public function setPoster(string $poster): self
+    {
+        $this->poster = $poster;
+
+        return $this;
+    }
+    public function setFile(File $image = null):User
+    {
+        $this->posterFile = $image;
+        return $this;
+    }
+
+    public function getFile(): ?File
+    {
+        return $this->posterFile;
     }
 }

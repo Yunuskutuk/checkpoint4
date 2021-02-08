@@ -15,7 +15,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                   (CV upload) -> exemple
+                   (CV a upload) -> exemple :
                     <img src="{{ asset('build/cvhulk.jpg') }}" width="480">
                 </div>
                 <div class="modal-footer">
@@ -25,6 +25,47 @@
         </div>
     </div>
 
+    <!-- Modal2 -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">CV de (id de la personne)</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    (CV a upload) -> exemple :
+                    <img src="{{ asset("build/cviron.jpg") }}" width="480">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Contacter (id.mail)</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal3 -->
+    <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">CV de (id de la personne)</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    (CV a upload) -> exemple :
+                    <img src="{{ asset("build/cvrecep.jpg") }}" width="480">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Contacter (id.mail)</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
@@ -34,7 +75,7 @@
         </ol>
         <div class="carousel-inner" style="border: solid 5px #FFFFFF">
             <div class="carousel-item active">
-                <img class="d-block w-100" src="{{ asset('build/medeciin.jpeg') }}" height="700" alt="First slide">
+                <img class="d-block w-100" src="{{ asset('build/medeciiin.jpeg') }}" height="700" alt="First slide">
             </div>
             <div class="carousel-item">
                 <img class="d-block w-100" src="{{ asset('build/mecaniique.jpeg') }}" height="700" alt="Second slide">
@@ -65,6 +106,7 @@
     <br>
     <br>
     <br>
+
 <div style='display:flex; margin-left: 100px'>
     <div class="row" style="margin-right: 160px">
         <div class="col-3">
@@ -88,7 +130,6 @@
         </div>
         </div>
         <div class="col-3">
-            <form method="post" action="startGame">
                 <div class="card">
                     <div class="card-image"><img src="{{ asset('build/iron.jpeg') }}">
                         <div class="card-body">
@@ -100,16 +141,14 @@
                             <br>
                             <h4 class="text-center">Age</h4>
                             <input type="text" name="id" value="value" style="display: none">
-                            <button  class="btn-succes" type="submit" data-toggle="modal" >
-                                <p>Voir le CV</p>
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                                Voir le CV
                             </button>
                         </div>
                     </div>
                 </div>
-            </form>
         </div>
         <div class="col-3">
-            <form method="post" action="startGame">
                 <div class="card">
                     <div class="card-image"><img src="{{ asset('build/recepi.jpeg') }}">
                         <div class="card-body">
@@ -121,13 +160,12 @@
                             <br>
                             <h4 class="text-center">Age</h4>
                             <input type="text" name="id" value="value" style="display: none">
-                            <button  class="btn-succes" type="submit" data-toggle="modal" >
-                                <p>Voir le CV</p>
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal3">
+                                Voir le CV
                             </button>
                         </div>
                     </div>
                 </div>
-            </form>
         </div>
         <div class="col-3">
                 <div class="card">
